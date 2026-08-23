@@ -1,9 +1,10 @@
 // ===== CONFIG =====
-const GITHUB_OWNER = 'MeowIsNeow';
-const GITHUB_REPO = 'Premmokastr';
+// Replace these with your GitHub username and repo name after creating your repo
+const GITHUB_OWNER = 'PremaMokshaAstrology';
+const GITHUB_REPO = 'Prema-Moksha-Astrology';
 const GITHUB_BRANCH = 'main';
 
-// ===== UI STRINGS (EN / PT / ES) =====
+// ===== UI STRINGS (EN / PT) =====
 const LANG = localStorage.getItem('cw-lang') || 'en';
 const STR = {
     en: {
