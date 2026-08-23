@@ -32,7 +32,7 @@ const PT = {
     'about.p4': 'Minha abordagem também foi moldada por mais de vinte anos de estudo em disciplinas terapêuticas, incluindo Medicina Tradicional Chinesa, yoga e Ayurveda. Essas tradições me ensinaram a olhar para a pessoa como um todo e a reconhecer as conexões sutis entre corpo, mente, emoções e espírito. Elas influenciaram profundamente a forma como trabalho com a astrologia e como abordo cada mapa.',
     'about.p5': 'Hoje, meu trabalho reúne astrologia psicológica, técnicas tradicionais, astrologia preditiva e o conhecimento que acumulei ao longo de muitos anos explorando cura, consciência e a experiência humana. No centro do meu trabalho há uma ideia simples: nossas vidas fazem parte de algo muito maior do que nós mesmos, e o céu acima de nós tem uma linguagem própria. Meu papel é ajudar a interpretar essa linguagem.',
     'about.p6': '<em>Obrigada por estar aqui. Convido você a explorar a astrologia comigo como uma forma de compreender a si mesmo, sua vida e seu lugar dentro do grande mistério do Cosmos.</em>',
-    'about.cta': 'Trabalhe Comigo',
+    'about.cta': 'Agendar uma Leitura',
 
     // Services
     'shop.h2': 'Serviços',
@@ -134,7 +134,7 @@ const ES = {
     'about.p4': 'Mi enfoque también ha sido moldeado por más de veinte años de estudio en disciplinas terapéuticas, incluyendo Medicina Tradicional China, yoga y Ayurveda. Estas tradiciones me enseñaron a mirar a la persona como un todo y a reconocer las conexiones sutiles entre cuerpo, mente, emociones y espíritu. Han influido profundamente en la forma en que trabajo con la astrología y en la manera en que abordo cada carta.',
     'about.p5': 'Hoy, mi trabajo reúne astrología psicológica, técnicas tradicionales, astrología predictiva y el conocimiento que he reunido a lo largo de muchos años explorando la sanación, la conciencia y la experiencia humana. En el corazón de mi trabajo hay una idea simple: nuestras vidas son parte de algo mucho más grande que nosotros mismos, y el cielo sobre nosotros tiene un lenguaje propio. Mi papel es ayudar a interpretar ese lenguaje.',
     'about.p6': '<em>Gracias por estar aquí. Te invito a explorar la astrología conmigo como una forma de comprenderte a ti mismo, tu vida y tu lugar dentro del gran misterio del Cosmos.</em>',
-    'about.cta': 'Trabaja Conmigo',
+    'about.cta': 'Reservar una Lectura',
 
     // Services
     'shop.h2': 'Servicios',
