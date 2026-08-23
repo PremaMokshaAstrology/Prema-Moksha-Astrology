@@ -37,7 +37,7 @@ const PT = {
     // Services
     'shop.h2': 'Serviços',
     'shop.sub': 'Leituras e análises escritas — via Zoom ou presencialmente',
-    'shop.book': 'Agendar',
+    'shop.book': 'Agendar uma Leitura',
     'shop.soon': 'Em Breve',
     'shop.note': 'Os preços são oferecidos em escala móvel — se você estiver com dificuldades, por favor <a href="#contact">me envie uma mensagem</a>.',
     'svc1.h3': 'Mapa Natal',
@@ -140,7 +140,7 @@ const ES = {
     // Services
     'shop.h2': 'Servicios',
     'shop.sub': 'Lecturas y análisis escritos — por Zoom o en persona',
-    'shop.book': 'Reservar',
+    'shop.book': 'Reservar una Lectura',
     'shop.soon': 'Próximamente',
     'shop.note': 'Los precios se ofrecen en escala variable — si lo necesitas, por favor <a href="#contact">envíame un mensaje</a>.',
     'svc1.h3': 'Carta Natal',
