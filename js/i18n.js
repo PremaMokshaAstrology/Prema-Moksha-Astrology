@@ -10,7 +10,7 @@ const PT = {
     'nav.about': 'Sobre',
     'nav.services': 'Serviços',
     'nav.reports': 'Relatórios de Exemplo',
-    'nav.newsletter': 'Newsletter',
+    'nav.newsletter': 'Assinaturas',
     'nav.classes': 'Cursos',
     'nav.blog': 'Blog',
     'nav.contact': 'Contato',
@@ -60,7 +60,7 @@ const PT = {
 
     // Sample Reports
     'reports.h2': 'Relatórios de Exemplo',
-    'reports.sub': 'Veja exatamente o que você receberá — baixe um exemplo de cada análise escrita',
+    'reports.sub': 'Veja exatamente o que você receberá e baixe um exemplo de cada análise escrita',
     'reports.dl': 'Baixar PDF',
     'reports.note': 'Os PDFs de exemplo são adicionados assim que ficam disponíveis. Para solicitar um antes, é só <a href="#contact">entrar em contato</a>.',
     'rep1.h3': 'Exemplo de Mapa Natal',
@@ -68,14 +68,14 @@ const PT = {
     'rep2.h3': 'Exemplo de Trânsitos e Progressões',
     'rep2.desc': 'Veja como os ciclos planetários atuais são interpretados e apresentados em uma análise escrita de trânsitos e progressões.',
     'rep3.h3': 'Exemplo de Sinastria',
-    'rep3.desc': 'Um exemplo de análise de relacionamento entre dois mapas — como compatibilidade, dinâmicas e áreas de crescimento são exploradas.',
+    'rep3.desc': 'Um exemplo de análise de relacionamento entre dois mapas, em que exploramos a dinâmica de um relacionamento.',
 
     // Newsletter
-    'news.h2': 'A Carta Mensal de Trânsitos',
-    'news.sub': 'Trânsitos astrológicos e reflexões, entregues na sua caixa de entrada sempre que o céu tiver algo a dizer — uma ou mais vezes por mês, dependendo dos trânsitos',
-    'news.tier': 'Newsletter Mensal',
+    'news.h2': 'Assinaturas',
+    'news.sub': 'Conteúdo exclusivo para assinantes, com trânsitos e reflexões da semana, disponível por uma pequena taxa.',
+    'news.tier': 'Assinaturas',
     'news.per': '/mês',
-    'news.ul': '<li>Os principais trânsitos astrológicos do mês, explicados</li><li>O que o céu do mês significa para cada signo</li><li>Orientações de lua nova e lua cheia</li>',
+    'news.ul': '<li>Análise de trânsitos para cada um dos signos Ascendentes</li><li>Lições e artigos aprofundados</li><li>Reflexões para o período</li>',
     'news.btn': 'Assinar',
     'news.note': 'Pagamento seguro e cancelamento fácil, gerenciados pela nossa plataforma de newsletter.',
 
@@ -84,7 +84,8 @@ const PT = {
     'classes.sub': 'Aprenda astrologia em um ambiente estruturado e acolhedor',
     'classes.intro': 'Os cursos estão em desenvolvimento — os temas planejados incluem fundamentos da astrologia psicológica, leitura de mapa natal e técnicas preditivas. Eles provavelmente serão hospedados no Patreon, onde um círculo de membros com conteúdo exclusivo também está tomando forma.',
     'classes.soon': 'Cursos e Círculo de Membros — Em Breve',
-    'classes.cta': 'Assine a Newsletter para Novidades',
+    'classes.cta': 'Assine para Receber Novidades',
+    'classes.note': 'ou volte sempre para ver o novo conteúdo',
 
     // Blog
     'blog.h2': 'Últimas do Blog',
@@ -111,7 +112,7 @@ const ES = {
     'nav.about': 'Sobre Mí',
     'nav.services': 'Servicios',
     'nav.reports': 'Informes de Ejemplo',
-    'nav.newsletter': 'Boletín',
+    'nav.newsletter': 'Suscripciones',
     'nav.classes': 'Cursos',
     'nav.blog': 'Blog',
     'nav.contact': 'Contacto',
@@ -155,7 +156,7 @@ const ES = {
 
     // Sample Reports
     'reports.h2': 'Informes de Ejemplo',
-    'reports.sub': 'Mira exactamente lo que recibirás — descarga un ejemplo de cada análisis escrito',
+    'reports.sub': 'Mira exactamente lo que recibirás y descarga un ejemplo de cada análisis escrito',
     'reports.dl': 'Descargar PDF',
     'reports.note': 'Los PDF de ejemplo se agregan a medida que están disponibles. Para solicitar uno antes, solo <a href="#contact">ponte en contacto</a>.',
     'rep1.h3': 'Ejemplo de Carta Natal',
@@ -163,14 +164,14 @@ const ES = {
     'rep2.h3': 'Ejemplo de Tránsitos y Progresiones',
     'rep2.desc': 'Mira cómo se interpretan y presentan los ciclos planetarios actuales en un análisis escrito de tránsitos y progresiones.',
     'rep3.h3': 'Ejemplo de Sinastría',
-    'rep3.desc': 'Un ejemplo de análisis de relación entre dos cartas — cómo se exploran la compatibilidad, las dinámicas y las áreas de crecimiento.',
+    'rep3.desc': 'Un ejemplo de un análisis de relación entre dos cartas, donde exploramos la dinámica de una relación.',
 
     // Newsletter
-    'news.h2': 'La Carta Mensual de Tránsitos',
-    'news.sub': 'Tránsitos astrológicos y reflexiones, entregados en tu bandeja de entrada cada vez que el cielo tenga algo que decir — una o más veces al mes, dependiendo de los tránsitos',
-    'news.tier': 'Boletín Mensual',
+    'news.h2': 'Suscripciones',
+    'news.sub': 'Contenido exclusivo para suscriptores, con tránsitos y reflexiones de la semana, disponible por una pequeña cuota.',
+    'news.tier': 'Suscripciones',
     'news.per': '/mes',
-    'news.ul': '<li>Los principales tránsitos astrológicos del mes, explicados</li><li>Lo que el cielo del mes significa para cada signo</li><li>Orientaciones de luna nueva y luna llena</li>',
+    'news.ul': '<li>Análisis de tránsitos para cada uno de los signos Ascendentes</li><li>Lecciones y artículos en profundidad</li><li>Reflexiones para el período</li>',
     'news.btn': 'Suscribirse',
     'news.note': 'Pago seguro y cancelación fácil, gestionados por nuestra plataforma de boletín.',
 
@@ -179,7 +180,8 @@ const ES = {
     'classes.sub': 'Aprende astrología en un ambiente estructurado y acogedor',
     'classes.intro': 'Los cursos están en desarrollo — los temas planeados incluyen fundamentos de astrología psicológica, lectura de carta natal y técnicas predictivas. Probablemente estarán alojados en Patreon, donde también está tomando forma un círculo de miembros con contenido exclusivo.',
     'classes.soon': 'Cursos y Círculo de Miembros — Próximamente',
-    'classes.cta': 'Suscríbete al Boletín para Novedades',
+    'classes.cta': 'Suscríbete para Recibir Novedades',
+    'classes.note': 'o vuelve a menudo para ver el nuevo contenido',
 
     // Blog
     'blog.h2': 'Últimas del Blog',
