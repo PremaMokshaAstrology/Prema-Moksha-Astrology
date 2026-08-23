@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: MeowIsNeow/Premmokastr
+  repo: PremaMokshaAstrology/Prema-Moksha-Astrology
   branch: main
 
 media_folder: "images/uploads"
