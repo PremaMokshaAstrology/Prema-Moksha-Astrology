@@ -229,11 +229,6 @@ section { padding: 6rem 2rem; position: relative; }
 .about-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .about-image { position: relative; }
 .about-image img { width: 100%; border-radius: 4px; box-shadow: 0 20px 60px var(--shadow); }
-.about-image::before {
-    content: ''; position: absolute; top: -15px; left: -15px;
-    right: 15px; bottom: 15px; border: 1px solid var(--gold);
-    border-radius: 4px; z-index: -1;
-}
 .about-text h3 { font-size: 2rem; color: var(--cream); margin-bottom: 1.5rem; }
 .about-text p { margin-bottom: 1.2rem; max-width: 65ch; }
 .about-text .btn { margin-top: 1rem; opacity: 1; animation: none; }
@@ -442,7 +437,6 @@ footer p { font-size: 0.9rem; color: var(--gold-dim); }
     .hero-tagline { font-size: 0.8rem; }
     .hero-desc { font-size: 1.1rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .about-image::before { display: none; }
     .section-header h2 { font-size: 1.8rem; }
     .tier.featured { transform: scale(1); }
     .tier.featured:hover { transform: scale(1) translateY(-5px); }
