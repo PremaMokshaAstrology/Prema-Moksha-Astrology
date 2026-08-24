@@ -6,6 +6,7 @@
     <title>Blog — Prema Moksha Astrology</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script>(function(){var t=localStorage.getItem('cw-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}})();</script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -22,6 +23,9 @@
             <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
             <li><div class="lang-switch" id="langSwitch" role="group" aria-label="Language">
                 <button data-lang="en">EN</button><button data-lang="pt">PT</button><button data-lang="es">ES</button>
+            </div></li>
+            <li><div class="theme-switch" id="themeSwitch" role="group" aria-label="Theme">
+                <button data-theme="light" title="Light theme">☀</button><button data-theme="beige" title="Beige theme" class="active">◐</button><button data-theme="dark" title="Dark theme">☾</button>
             </div></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
@@ -40,6 +44,7 @@
         <p data-i18n="footer.text">© 2026 Prema Moksha Astrology. All rights reserved. | Crafted with cosmic love ✦</p>
     </footer>
 
+    <script src="js/theme.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
