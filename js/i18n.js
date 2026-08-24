@@ -73,12 +73,12 @@ const PT = {
 
     // Newsletter
     'news.h2': 'Assinaturas',
-    'news.sub': 'Conteúdo exclusivo para assinantes, com trânsitos e reflexões da semana, disponível por uma pequena taxa.',
-    'news.tier': 'Assinaturas',
-    'news.per': '/mês',
+    'news.sub': 'Uma newsletter gratuita com trânsitos e reflexões da semana — direto na sua caixa de entrada.',
+    'news.tier': 'Newsletter',
+    'news.free': 'Grátis',
     'news.ul': '<li>Análise de trânsitos para cada um dos signos Ascendentes</li><li>Lições e artigos aprofundados</li><li>Reflexões para o período</li>',
     'news.btn': 'Assinar',
-    'news.note': 'Pagamento seguro e cancelamento fácil, gerenciados pela nossa plataforma de newsletter.',
+    'news.note': 'Sem custo, sem spam — cancele quando quiser com um clique.',
 
     // Classes
     'classes.h2': 'Cursos e Círculo de Membros',
@@ -170,12 +170,12 @@ const ES = {
 
     // Newsletter
     'news.h2': 'Suscripciones',
-    'news.sub': 'Contenido exclusivo para suscriptores, con tránsitos y reflexiones de la semana, disponible por una pequeña cuota.',
-    'news.tier': 'Suscripciones',
-    'news.per': '/mes',
+    'news.sub': 'Un boletín gratuito con tránsitos y reflexiones de la semana — directo a tu bandeja de entrada.',
+    'news.tier': 'Boletín',
+    'news.free': 'Gratis',
     'news.ul': '<li>Análisis de tránsitos para cada uno de los signos Ascendentes</li><li>Lecciones y artículos en profundidad</li><li>Reflexiones para el período</li>',
     'news.btn': 'Suscribirse',
-    'news.note': 'Pago seguro y cancelación fácil, gestionados por nuestra plataforma de boletín.',
+    'news.note': 'Sin costo, sin spam — cancela cuando quieras con un clic.',
 
     // Classes
     'classes.h2': 'Cursos y Círculo de Miembros',
