@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Prema Moksha Astrology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>(function(){var t=localStorage.getItem('cw-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}})();</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .admin-wrap { max-width: 860px; margin: 0 auto; padding: 8rem 1.5rem 4rem; min-height: 100vh; }
+        .admin-wrap h1 { color: var(--gold); font-size: 2rem; margin-bottom: 0.5rem; }
+        .admin-sub { color: var(--gold-dim); font-size: 1rem; margin-bottom: 2.5rem; }
+        .admin-card {
+            background: var(--input-bg); border: 1px solid rgba(212,175,55,0.25);
+            padding: 2rem; margin-bottom: 2rem;
+        }
+        .admin-card label {
+            display: block; font-family: 'Cinzel', serif; font-size: 0.8rem;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+            margin: 1.2rem 0 0.4rem;
+        }
+        .admin-card input, .admin-card select, .admin-card textarea {
+            width: 100%; padding: 0.8rem 1rem; background: var(--input-bg);
+            border: 1px solid rgba(212,175,55,0.3); border-radius: 4px;
+            color: var(--cream); font-family: 'Lato', sans-serif; font-size: 1rem;
+        }
+        .admin-card textarea { min-height: 320px; font-family: monospace; font-size: 0.95rem; line-height: 1.6; resize: vertical; }
+        .admin-card input:focus, .admin-card select:focus, .admin-card textarea:focus { outline: none; border-color: var(--gold); }
+        .admin-actions { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .admin-actions .btn { width: auto; padding: 0.8rem 1.8rem; font-size: 0.8rem; }
+        .btn-danger { border-color: #a83232; color: #a83232; }
+        .btn-danger::before { background: #a83232; }
+        .btn-danger:hover { color: var(--input-bg); }
+        .post-row {
+            display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+            padding: 1rem 0; border-bottom: 1px solid rgba(212,175,55,0.15);
+        }
+        .post-row .meta { flex: 1; min-width: 0; }
+        .post-row .meta strong { color: var(--cream); font-family: 'Cinzel', serif; font-weight: 600; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .post-row .meta span { color: var(--gold-dim); font-size: 0.85rem; }
+        .post-row .row-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+        .post-row .btn { padding: 0.45rem 1rem; font-size: 0.7rem; width: auto; }
+        .admin-status { margin-top: 1rem; font-size: 0.95rem; min-height: 1.3rem; }
+        .admin-status.ok { color: var(--gold-light); }
+        .admin-status.err { color: #a83232; }
+        .admin-note { font-size: 0.9rem; color: var(--gold-dim); margin-top: 1rem; line-height: 1.6; }
+        .admin-note code { background: rgba(212,175,55,0.12); padding: 0.1rem 0.4rem; border-radius: 3px; }
+        .preview-box {
+            border: 1px dashed rgba(212,175,55,0.35); border-radius: 4px;
+            padding: 1.5rem; margin-top: 1.5rem;
+        }
+        .preview-box h4 { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html" class="logo">Prema Moksha <span>Astrology</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">← Back to Site</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><div class="theme-switch" id="themeSwitch" role="group" aria-label="Theme">
+                <button data-theme="light" title="Light theme">☀</button><button data-theme="beige" title="Beige theme" class="active">◐</button><button data-theme="dark" title="Dark theme">☾</button>
+            </div></li>
+        </ul>
+    </nav>
+
+    <div class="admin-wrap">
+        <h1>Blog Admin</h1>
+        <p class="admin-sub">Create, edit, and delete blog posts. Changes publish automatically within a minute or two.</p>
+
+        <!-- LOGIN -->
+        <div id="loginView" class="admin-card">
+            <label for="tokenInput">GitHub Access Token</label>
+            <input type="password" id="tokenInput" placeholder="Paste your token here" autocomplete="off">
+            <div class="admin-actions">
+                <button class="btn" id="loginBtn">Log In</button>
+            </div>
+            <p class="admin-status" id="loginStatus"></p>
+            <p class="admin-note">
+                This page edits the blog through your GitHub account. You'll need a <strong>fine-grained personal access token</strong>
+                with <code>Contents: Read and Write</code> permission on the <code>Prema-Moksha-Astrology</code> repository.
+                Create one at GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens.
+                The token is stored only in this browser on this device — it never goes anywhere except directly to GitHub.
+            </p>
+        </div>
+
+        <!-- POST LIST -->
+        <div id="listView" class="hidden">
+            <div class="admin-card">
+                <div class="admin-actions" style="margin-top:0; margin-bottom:1rem;">
+                    <button class="btn" id="newPostBtn">+ New Post</button>
+                    <button class="btn" id="refreshBtn">Refresh</button>
+                    <button class="btn btn-danger" id="logoutBtn">Log Out</button>
+                </div>
+                <div id="postList"><p class="admin-note">Loading posts…</p></div>
+            </div>
+        </div>
+
+        <!-- EDITOR -->
+        <div id="editView" class="hidden">
+            <div class="admin-card">
+                <label for="fTitle">Title</label>
+                <input type="text" id="fTitle" placeholder="Post title">
+
+                <label for="fDate">Publish Date</label>
+                <input type="date" id="fDate">
+
+                <label for="fCategory">Category</label>
+                <select id="fCategory">
+                    <option>Transit</option>
+                    <option>Forecast</option>
+                    <option>Guide</option>
+                    <option>Beginner</option>
+                    <option>Retrograde</option>
+                    <option>Lifestyle</option>
+                </select>
+
+                <label for="fBody">Body (Markdown)</label>
+                <textarea id="fBody" placeholder="Write your post here… Markdown is supported: **bold**, *italic*, ## headings, - lists"></textarea>
+
+                <div class="preview-box hidden" id="previewBox">
+                    <h4>Preview</h4>
+                    <div class="post-content" id="previewContent"></div>
+                </div>
+
+                <div class="admin-actions">
+                    <button class="btn" id="saveBtn">Publish</button>
+                    <button class="btn" id="previewBtn">Preview</button>
+                    <button class="btn" id="cancelBtn">Cancel</button>
+                </div>
+                <p class="admin-status" id="editStatus"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
