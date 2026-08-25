@@ -12,6 +12,21 @@ function applyTheme(theme) {
     document.querySelectorAll('#themeSwitch button').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.theme === theme);
     });
+    swapThemeImage(theme);
+}
+
+// Swap the About photo per theme (about-light.jpg / about-dark.jpg),
+// falling back to about.jpg if the themed photo doesn't exist.
+function swapThemeImage(theme) {
+    const img = document.querySelector('.about-image img');
+    if (!img) return;
+    const fallback = 'images/about.jpg';
+    const themed = theme === 'beige' ? fallback : `images/about-${theme}.jpg`;
+    if (themed === fallback) { img.src = fallback; return; }
+    const test = new Image();
+    test.onload = () => { img.src = themed; };
+    test.onerror = () => { img.src = fallback; };
+    test.src = themed;
 }
 
 function currentTheme() {
