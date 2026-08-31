@@ -240,11 +240,12 @@ section { padding: 6rem 2rem; position: relative; }
     background: url('../images/freebies.jpg') center/cover no-repeat; opacity: 0.08;
 }
 .freebies .section-content { position: relative; z-index: 1; }
-.cards-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.cards-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: stretch; }
 .card {
     background: var(--input-bg); border: 1px solid rgba(212, 175, 55, 0.2);
     padding: 2.5rem; text-align: center; transition: all 0.4s ease;
     position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
 }
 .card::before {
     content: ''; position: absolute; top: 0; left: 0;
@@ -256,7 +257,7 @@ section { padding: 6rem 2rem; position: relative; }
 .card-icon { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--gold); }
 .card h3 { font-size: 1.3rem; color: var(--cream); margin-bottom: 1rem; }
 .card p { font-size: 1rem; margin-bottom: 1.5rem; }
-.card .btn { font-size: 0.75rem; padding: 0.7rem 1.5rem; opacity: 1; animation: none; }
+.card .btn { font-size: 0.75rem; padding: 0.7rem 1.5rem; opacity: 1; animation: none; margin-top: auto; align-self: center; }
 
 /* ===== SUBSCRIPTION ===== */
 .subscription {
@@ -272,6 +273,7 @@ section { padding: 6rem 2rem; position: relative; }
 .tier {
     background: var(--input-bg); border: 1px solid rgba(212, 175, 55, 0.25);
     padding: 3rem 2rem; text-align: center; position: relative; transition: all 0.4s ease;
+    display: flex; flex-direction: column;
 }
 .tier.featured { border-color: var(--gold); transform: scale(1.05); box-shadow: 0 0 40px rgba(212, 175, 55, 0.15); }
 .tier.featured::after {
@@ -292,7 +294,7 @@ section { padding: 6rem 2rem; position: relative; }
     color: var(--star-white);
 }
 .tier ul li::before { content: '✦'; color: var(--gold); margin-right: 0.8rem; }
-.tier .btn { opacity: 1; animation: none; width: 100%; }
+.tier .btn { opacity: 1; animation: none; width: 100%; margin-top: auto; }
 
 /* ===== CLASSES ===== */
 .classes { background: var(--purple); position: relative; }
@@ -394,16 +396,17 @@ section { padding: 6rem 2rem; position: relative; }
 .shop { background: var(--deep-purple); position: relative; }
 .shop::before { content: ''; position: absolute; inset: 0; background: url('../images/shop.jpg') center/cover no-repeat; opacity: 0.06; }
 .shop-content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
-.shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: stretch; }
 .shop-card {
     background: var(--input-bg); border: 1px solid rgba(212, 175, 55, 0.2);
     padding: 2.5rem; text-align: center; transition: all 0.4s ease;
+    display: flex; flex-direction: column;
 }
 .shop-card:hover { border-color: var(--gold); transform: translateY(-8px); box-shadow: 0 20px 40px var(--shadow); }
 .shop-card .price-tag { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--gold); margin: 1rem 0; }
 .shop-card h3 { font-size: 1.4rem; color: var(--cream); margin-bottom: 1rem; }
 .shop-card p { font-size: 1rem; margin-bottom: 1.5rem; }
-.shop-card .btn { opacity: 1; animation: none; }
+.shop-card .btn { opacity: 1; animation: none; margin-top: auto; align-self: center; }
 .shop-card ul { list-style: none; margin: 1.5rem 0; text-align: left; }
 .shop-card ul li { font-family: 'Lato', sans-serif; font-weight: 500; font-size: 1.02rem; padding: 0.4rem 0; color: var(--star-white); }
 
