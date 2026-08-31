@@ -71,14 +71,15 @@ const PT = {
     'rep3.h3': 'Exemplo de Sinastria',
     'rep3.desc': 'Um exemplo de análise de relacionamento entre dois mapas, em que exploramos a dinâmica de um relacionamento.',
 
-    // Newsletter
+    // Newsletter / Subscriptions
     'news.h2': 'Assinaturas',
-    'news.sub': 'Uma newsletter gratuita com trânsitos e reflexões da semana — direto na sua caixa de entrada.',
-    'news.tier': 'Newsletter',
-    'news.free': 'Grátis',
+    'news.sub': 'Conteúdo exclusivo para assinantes, com trânsitos e reflexões da semana, disponível por uma pequena taxa.',
+    'news.tier': 'Assinatura',
+    'news.free': '$5/mês',
     'news.ul': '<li>Análise de trânsitos para cada um dos signos Ascendentes</li><li>Lições e artigos aprofundados</li><li>Reflexões para o período</li>',
-    'news.btn': 'Assinar',
-    'news.note': 'Sem custo, sem spam — cancele quando quiser com um clique.',
+    'news.btnSub': 'Assinar no Substack',
+    'news.btnPat': 'Assinar no Patreon',
+    'news.note': 'Cancele quando quiser — sem fidelidade.',
 
     // Classes
     'classes.h2': 'Cursos e Círculo de Membros',
@@ -168,14 +169,15 @@ const ES = {
     'rep3.h3': 'Ejemplo de Sinastría',
     'rep3.desc': 'Un ejemplo de un análisis de relación entre dos cartas, donde exploramos la dinámica de una relación.',
 
-    // Newsletter
+    // Newsletter / Subscriptions
     'news.h2': 'Suscripciones',
-    'news.sub': 'Un boletín gratuito con tránsitos y reflexiones de la semana — directo a tu bandeja de entrada.',
-    'news.tier': 'Boletín',
-    'news.free': 'Gratis',
+    'news.sub': 'Contenido exclusivo para suscriptores, con tránsitos y reflexiones de la semana, disponible por una pequeña tarifa.',
+    'news.tier': 'Suscripción',
+    'news.free': '$5/mes',
     'news.ul': '<li>Análisis de tránsitos para cada uno de los signos Ascendentes</li><li>Lecciones y artículos en profundidad</li><li>Reflexiones para el período</li>',
-    'news.btn': 'Suscribirse',
-    'news.note': 'Sin costo, sin spam — cancela cuando quieras con un clic.',
+    'news.btnSub': 'Suscribirse en Substack',
+    'news.btnPat': 'Suscribirse en Patreon',
+    'news.note': 'Cancela cuando quieras — sin permanencia.',
 
     // Classes
     'classes.h2': 'Cursos y Círculo de Miembros',
