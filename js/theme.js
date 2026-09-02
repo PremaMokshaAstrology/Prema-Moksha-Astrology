@@ -4,11 +4,7 @@ const THEMES = ['light', 'beige', 'dark'];
 
 function applyTheme(theme) {
     if (!THEMES.includes(theme)) theme = 'light';
-    if (theme === 'light') {
-        document.documentElement.removeAttribute('data-theme');
-    } else {
-        document.documentElement.setAttribute('data-theme', theme);
-    }
+    document.documentElement.setAttribute('data-theme', theme);
     document.querySelectorAll('#themeSwitch button').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.theme === theme);
     });
