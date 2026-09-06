@@ -1,0 +1,16 @@
+/* ===== SESSION PAGE ===== */
+.session-content { max-width: 820px; margin: 0 auto; }
+.session-content p { margin-bottom: 1.2rem; }
+.session-content h3 { font-size: 1.35rem; color: var(--gold); margin: 2.5rem 0 0.8rem; }
+.session-h2 { font-size: 1.9rem; color: var(--gold); margin: 4.5rem 0 1rem; text-align: center; }
+.session-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 2rem; }
+.session-pricing { margin: 2.5rem 0; }
+.session-pricing .tier .price { font-size: 2.2rem; }
+.session-pricing .tier h3 { margin: 0 0 0.5rem; min-height: 3.2rem; display: flex; align-items: center; justify-content: center; }
+.session-note { font-size: 0.95rem; color: var(--gold-dim); text-align: center; }
+.session-cta { text-align: center; margin: 4rem 0 1rem; }
+
+@media (max-width: 768px) {
+    .session-h2 { font-size: 1.5rem; }
+    .session-pricing .tier h3 { min-height: 0; }
+}
