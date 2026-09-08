@@ -1,0 +1,26 @@
+# Prema Moksha Astrology crawler policy
+# Public search and AI search discovery are welcome.
+
+User-agent: *
+Allow: /
+
+# OpenAI search/citation crawler
+User-agent: OAI-SearchBot
+Allow: /
+
+# User-requested ChatGPT page visits
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity search/index crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Keep model-training crawler access separate from search discovery
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+Sitemap: https://premamokshaastrology.com/sitemap.xml
