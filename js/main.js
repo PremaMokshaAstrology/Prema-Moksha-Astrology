@@ -4,6 +4,13 @@ const GITHUB_OWNER = 'PremaMokshaAstrology';
 const GITHUB_REPO = 'Prema-Moksha-Astrology';
 const GITHUB_BRANCH = 'main';
 
+const LATEST_NEWSLETTER = {
+    title: 'The Week Ahead',
+    date: 'September 7–13, 2026',
+    url: 'https://premamokshaastrology.substack.com/p/astrological-forecast',
+    description: 'Read the first free issue of the Prema Moksha Astrology forecast, with the Virgo New Moon, Venus entering Scorpio, Mercury moving into Libra, and guidance for every Ascendant.'
+};
+
 // ===== UI STRINGS (EN / PT) =====
 const LANG = localStorage.getItem('cw-lang') || 'en';
 const STR = {
@@ -114,6 +121,31 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 fadeElements.forEach(el => observer.observe(el));
+
+// ===== LATEST NEWSLETTER =====
+function addLatestNewsletter() {
+    const subscriptionContent = document.querySelector('#subscription .subscription-content');
+    if (!subscriptionContent || document.getElementById('latest-newsletter')) return;
+
+    const latest = document.createElement('article');
+    latest.id = 'latest-newsletter';
+    latest.className = 'card';
+    latest.style.maxWidth = '760px';
+    latest.style.margin = '3.5rem auto 0';
+    latest.innerHTML = `
+        <div class="card-icon" aria-hidden="true">☽</div>
+        <p style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.55rem;">Latest Newsletter</p>
+        <h3>${LATEST_NEWSLETTER.title}</h3>
+        <p style="font-family: 'Cinzel', serif; color: var(--gold-deep); font-size: 0.95rem; letter-spacing: 0.08em; margin-bottom: 1rem;">${LATEST_NEWSLETTER.date}</p>
+        <p>${LATEST_NEWSLETTER.description}</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.4rem;">
+            <a href="${LATEST_NEWSLETTER.url}" class="btn" target="_blank" rel="noopener noreferrer">Read the Free Issue</a>
+            <a href="https://premamokshaastrology.substack.com/subscribe" class="btn" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </div>
+    `;
+
+    subscriptionContent.appendChild(latest);
+}
 
 // ===== CONTACT FORM (Web3Forms) =====
 const contactForm = document.getElementById('contactForm');
@@ -352,6 +384,7 @@ function parseFrontmatter(markdown) {
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
+    addLatestNewsletter();
     loadLatestPosts();
     loadBlogPosts();
 });
