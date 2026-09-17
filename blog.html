@@ -6,7 +6,19 @@
     <title>Astrology Blog | Transits, Horoscopes & Chart Insights | Prema Moksha Astrology</title>
     <meta name="description" content="Astrology articles from Prema Moksha Astrology exploring transits, natal charts, houses, planetary cycles, horoscopes, and practical astrological guidance.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://premamokshaastrology.com/blog">
+    <script>
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        var post = params.get('post');
+        var canonicalUrl = post
+            ? 'https://premamokshaastrology.com/blog?post=' + encodeURIComponent(post)
+            : 'https://premamokshaastrology.com/blog';
+        var link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonicalUrl;
+        document.head.appendChild(link);
+    })();
+    </script>
     <meta property="og:type" content="website">
     <meta property="og:title" content="Astrology Blog | Prema Moksha Astrology">
     <meta property="og:description" content="Articles, forecasts, and astrological insights on transits, natal charts, houses, planetary cycles, and the astrological life.">
