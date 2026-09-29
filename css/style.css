@@ -98,6 +98,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 a { color: var(--gold); text-decoration: none; }
 
+/* Current horoscopes: visible links from the homepage to each collection. */
+.featured-horoscopes { background: var(--deep-purple); padding: 3.5rem 2rem; }
+.featured-horoscopes-inner { max-width: 1120px; margin: 0 auto; }
+.featured-horoscopes h2 { text-align: center; color: var(--gold-deep); font-size: 1.55rem; margin-bottom: 2rem; }
+.featured-horoscopes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+.featured-horoscopes article { padding: 2rem; background: var(--input-bg); border: 1px solid rgba(168, 132, 44, 0.3); }
+.featured-horoscopes .featured-date { color: var(--gold-dim); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
+.featured-horoscopes h3 { font-size: 1.1rem; line-height: 1.5; margin-bottom: 0.75rem; }
+.featured-horoscopes h3 a { color: var(--cream); }
+.featured-horoscopes h3 a:hover, .featured-link:hover { color: var(--gold-light); }
+.featured-horoscopes article > p:not(.featured-date) { font-size: 0.98rem; line-height: 1.65; margin-bottom: 1rem; }
+.featured-link { color: var(--link-strong); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 720px) { .featured-horoscopes-grid { grid-template-columns: 1fr; } }
+
 /* ===== NAVIGATION ===== */
 nav {
     position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
