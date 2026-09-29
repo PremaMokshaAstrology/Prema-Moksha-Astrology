@@ -66,6 +66,13 @@ body{background:var(--hor-bg)}
 .horoscope-cta p{font-size:1.13rem;line-height:1.7;color:rgba(255,255,255,.78);max-width:720px;margin:0 auto 28px}
 @media(max-width:900px){.horoscope-hero-inner{grid-template-columns:1fr}.sign-picker{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:640px){.horoscope-page{padding-top:72px}.horoscope-hero{min-height:430px;padding-bottom:48px}.hero-note{padding-left:0;border-left:0}.horoscope-intro{padding-top:48px}.sign-picker{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.sign-button{font-size:.61rem;padding:11px 5px}.sign-button span{display:block;margin:0 0 3px;font-size:1.25rem}.sign-panel summary{padding:18px 18px;gap:13px}.sign-content{padding:30px 20px 36px}.phase p:not(.phase-note){font-size:1.12rem;line-height:1.76}}
+
+.horoscope-tabs{display:flex;justify-content:center;gap:10px;padding:24px 20px;background:#fdfbf6;border-bottom:1px solid var(--hor-line)}
+.horoscope-tabs a{font-family:'Lato',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--hor-deep);border:1px solid var(--hor-gold-soft);border-radius:999px;padding:12px 19px;line-height:1.4;text-align:center}
+.horoscope-tabs a[aria-current="page"]{background:var(--hor-deep);border-color:var(--hor-deep);color:#fff}
+.horoscope-tabs a:hover{border-color:var(--hor-deep)}
+.horoscope-tabs a:focus-visible,.sign-button:focus-visible,.sign-panel summary:focus-visible{outline:3px solid var(--hor-gold);outline-offset:3px}
+@media(max-width:640px){.horoscope-tabs{gap:7px;padding:17px 12px}.horoscope-tabs a{font-size:.66rem;letter-spacing:.05em;padding:11px 12px;flex:1}}
 </style>
 </head>
 <body>
@@ -77,6 +84,7 @@ body{background:var(--hor-bg)}
 </nav>
 
 <main class="horoscope-page">
+<nav class="horoscope-tabs" aria-label="Horoscope collections"><a href="/horoscopes" aria-current="page">Venus in Scorpio Cycle</a><a href="/weekly-horoscope">This Week’s Horoscope</a></nav>
 <section class="horoscope-hero">
 <div class="horoscope-hero-inner">
 <div><p class="kicker">September 10, 2026 – January 7, 2027</p><h1>Venus in Scorpio <em>Horoscopes by Rising Sign</em></h1></div>
