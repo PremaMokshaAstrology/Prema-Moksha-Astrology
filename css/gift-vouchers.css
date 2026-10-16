@@ -8,6 +8,7 @@
 .gift-copy p a { overflow-wrap: anywhere; }
 .gift-email-first { color: var(--cream); }
 .gift-email-button { margin: 0.25rem 0 0.5rem; }
+.gift-copy .gift-email-help { font-size: 0.95rem; line-height: 1.6; margin-top: 0.4rem; }
 .payment-options { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--gold-dim); }
 .payment-options h3 { color: var(--cream); font-size: 1.35rem; margin-bottom: 1rem; }
 .payment-options p { margin-bottom: 1rem; }

@@ -285,7 +285,9 @@ Object.assign(PT, {
     "pay.identity": "As contas do PayPal e do Venmo estão em nome de Samantha Medeiros. Usuário do Venmo @scampostrini.",
     "pay.heading": "Pague sua consulta ou relatório",
     "pay.instructions": "Após combinarmos o serviço e o valor, você pode pagar usando um dos links abaixo.",
-    "gift.sessionLink": "Vai comprar uma consulta para outra pessoa? Escolha um vale-presente."
+    "gift.sessionLink": "Vai comprar uma consulta para outra pessoa? Escolha um vale-presente.",
+    "gift.gmail": "Abre o Gmail no navegador.",
+    "gift.emailApp": "Usar outro aplicativo de e-mail"
 });
 Object.assign(ES, {
     "nav.gifts": "Vales regalo",
@@ -299,7 +301,9 @@ Object.assign(ES, {
     "pay.identity": "Las cuentas de PayPal y Venmo están a nombre de Samantha Medeiros. Usuario de Venmo @scampostrini.",
     "pay.heading": "Paga tu consulta o informe",
     "pay.instructions": "Una vez acordados el servicio y el importe, puedes pagar con uno de los enlaces de abajo.",
-    "gift.sessionLink": "¿Compras una consulta para otra persona? Elige un vale regalo."
+    "gift.sessionLink": "¿Compras una consulta para otra persona? Elige un vale regalo.",
+    "gift.gmail": "Abre Gmail en tu navegador.",
+    "gift.emailApp": "Usar otra aplicación de correo"
 });
 
 const DICTS = { pt: PT, es: ES };
