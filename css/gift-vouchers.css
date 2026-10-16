@@ -11,13 +11,13 @@
 .payment-options { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--gold-dim); }
 .payment-options h3 { color: var(--cream); font-size: 1.35rem; margin-bottom: 1rem; }
 .payment-options p { margin-bottom: 1rem; }
-.payment-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.25rem 0; }
-.payment-buttons .btn { letter-spacing: 0.05em; padding: 0.9rem 1.5rem; text-align: center; max-width: none; }
+.payment-links { margin: 1.25rem 0; }
+.payment-row { display: flex; align-items: center; gap: 0.9rem; padding: 0.6rem 0; }
+.payment-row img { flex: 0 0 32px; width: 32px; height: 32px; object-fit: contain; }
+.payment-row a { color: var(--link-strong); text-decoration: underline; text-underline-offset: 4px; font-weight: 500; line-height: 1.65; overflow-wrap: anywhere; min-width: 0; }
 .payment-options .payment-identity { font-size: 0.9rem; line-height: 1.65; }
 .gift-session-link { margin: 1.5rem 0; }
 @media (max-width: 600px) {
     .gift-copy { margin-top: 2rem; }
     .gift-email-button { width: 100%; max-width: none; text-align: center; }
-    .payment-buttons { flex-direction: column; }
-    .payment-buttons .btn { width: 100%; }
 }
