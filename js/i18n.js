@@ -272,6 +272,42 @@ const ES = {
     'footer.text': '© 2026 Prema Moksha Astrology. Todos los derechos reservados. | Hecho con amor cósmico ✦'
 };
 
+// Gift vouchers and payment options.
+Object.assign(PT, {
+    "nav.gifts": "Vales-presente",
+    "gift.title": "Vales-presente",
+    "gift.description": "Presenteie alguém de quem você gosta com uma consulta astrológica. É um presente único que pode abrir portas para uma jornada muito mais profunda de autoconhecimento e sintonia com os ciclos do Universo.",
+    "gift.purchase": "Para comprar um vale-presente, envie um e-mail para <a href=\"mailto:premamokshaastrology@gmail.com?subject=Gift%20Voucher%20Purchase&amp;body=Hello%20Prema%2C%0D%0A%0D%0AI%20would%20like%20to%20purchase%20an%20astrology%20consultation%20gift%20voucher.%0D%0A%0D%0AMy%20full%20name%3A%0D%0ARecipient%E2%80%99s%20full%20name%3A%0D%0A%0D%0AThank%20you%21\">premamokshaastrology@gmail.com</a> com seu nome completo e o nome de quem receberá o presente. Isso ajudará a associar os serviços pagos à pessoa certa.",
+    "gift.emailFirst": "<strong>Por favor, envie um e-mail antes de fazer o pagamento.</strong>",
+    "gift.emailButton": "Comprar por e-mail",
+    "gift.pay": "Opções de pagamento",
+    "gift.accepted": "Aceitamos pagamentos pelo Venmo e PayPal. Depois de enviar seu e-mail e confirmarmos a consulta e o valor, use um dos links abaixo.",
+    "gift.delivery": "Assim que o pagamento for confirmado, enviarei por e-mail o vale-presente digital, pronto para você compartilhar com seu amigo ou sua amiga.",
+    "pay.paypal": "Pagar com PayPal",
+    "pay.venmo": "Pagar com Venmo",
+    "pay.identity": "As contas do PayPal e do Venmo estão em nome de Samantha Medeiros. Usuário do Venmo @scampostrini.",
+    "pay.heading": "Pague sua consulta ou relatório",
+    "pay.instructions": "Após combinarmos o serviço e o valor, você pode pagar usando um dos links abaixo.",
+    "gift.sessionLink": "Vai comprar uma consulta para outra pessoa? Escolha um vale-presente."
+});
+Object.assign(ES, {
+    "nav.gifts": "Vales regalo",
+    "gift.title": "Vales regalo",
+    "gift.description": "Regala una consulta astrológica a alguien que quieres. Es un regalo único que puede abrir las puertas a un viaje mucho más profundo de autoconocimiento y sintonía con los ciclos del Universo.",
+    "gift.purchase": "Para comprar un vale regalo, escribe a <a href=\"mailto:premamokshaastrology@gmail.com?subject=Gift%20Voucher%20Purchase&amp;body=Hello%20Prema%2C%0D%0A%0D%0AI%20would%20like%20to%20purchase%20an%20astrology%20consultation%20gift%20voucher.%0D%0A%0D%0AMy%20full%20name%3A%0D%0ARecipient%E2%80%99s%20full%20name%3A%0D%0A%0D%0AThank%20you%21\">premamokshaastrology@gmail.com</a> con tu nombre completo y el nombre de la persona que recibirá tu regalo. Esto ayudará a asociar los servicios pagados con la persona correcta.",
+    "gift.emailFirst": "<strong>Por favor, envíame un correo antes de realizar el pago.</strong>",
+    "gift.emailButton": "Comprar por correo",
+    "gift.pay": "Opciones de pago",
+    "gift.accepted": "Se aceptan pagos por Venmo y PayPal. Una vez que me hayas escrito y hayamos confirmado la consulta y el importe, utiliza uno de los enlaces de abajo.",
+    "gift.delivery": "Una vez confirmado el pago, te enviaré el vale digital por correo, listo para compartir con tu amigo o amiga.",
+    "pay.paypal": "Pagar con PayPal",
+    "pay.venmo": "Pagar con Venmo",
+    "pay.identity": "Las cuentas de PayPal y Venmo están a nombre de Samantha Medeiros. Usuario de Venmo @scampostrini.",
+    "pay.heading": "Paga tu consulta o informe",
+    "pay.instructions": "Una vez acordados el servicio y el importe, puedes pagar con uno de los enlaces de abajo.",
+    "gift.sessionLink": "¿Compras una consulta para otra persona? Elige un vale regalo."
+});
+
 const DICTS = { pt: PT, es: ES };
 const LANG_TAGS = { en: 'en', pt: 'pt-BR', es: 'es' };
 
