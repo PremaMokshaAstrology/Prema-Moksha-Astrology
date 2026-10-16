@@ -150,6 +150,26 @@ function addLatestNewsletter() {
 // ===== CONTACT FORM (Web3Forms) =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+    // The voucher fallback uses the on-page form, without an email app.
+    const voucherContact = document.querySelector('[data-gift-contact]');
+    if (voucherContact) {
+        voucherContact.addEventListener('click', () => {
+            const message = contactForm.querySelector('textarea[name="message"]');
+            const lang = (document.documentElement.lang || 'en').split('-')[0];
+            const templates = {
+                en: 'Gift Voucher Purchase\n\nHello Prema, I would like to buy an astrology consultation gift voucher.\n\nMy full name:\nRecipient’s name:\nThe service I am interested in:',
+                pt: 'Compra de vale-presente\n\nOlá Prema, gostaria de comprar um vale-presente para uma consulta astrológica.\n\nMeu nome completo:\nNome de quem receberá o presente:\nO serviço que procuro:',
+                es: 'Compra de vale regalo\n\nHola Prema, me gustaría comprar un vale regalo para una consulta astrológica.\n\nMi nombre completo:\nNombre de quien recibirá el regalo:\nEl servicio que busco:'
+            };
+            if (message && (!message.dataset.giftRequest || !message.value.trim())) {
+                const template = templates[lang] || templates.en;
+                message.value = message.value.trim() ? message.value + '\n\n' + template : template;
+                message.dataset.giftRequest = 'true';
+            }
+            contactForm.querySelector('input[name="name"]')?.focus({ preventScroll: true });
+            // The anchor's native #contact navigation still works without JavaScript.
+        });
+    }
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const status = document.getElementById('formStatus');

@@ -201,7 +201,7 @@
                 <p data-i18n="gift.purchase">To buy a voucher, email <strong><a href="mailto:premamokshaastrology@gmail.com?subject=Gift%20Voucher%20Purchase&amp;body=Hello%20Prema%2C%0D%0A%0D%0AI%20would%20like%20to%20purchase%20an%20astrology%20consultation%20gift%20voucher.%0D%0A%0D%0AMy%20full%20name%3A%0D%0ARecipient%E2%80%99s%20full%20name%3A%0D%0A%0D%0AThank%20you%21">premamokshaastrology@gmail.com</a></strong> with your full name and the recipient’s name.</p>
                 <p class="gift-email-first" data-i18n="gift.emailFirst"><strong>Please email me before paying</strong> so I can match your payment with the right person and have a better idea of the service you are seeking.</p>
                 <a class="btn gift-email-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=premamokshaastrology%40gmail.com&amp;su=Gift%20Voucher%20Purchase&amp;body=Hello%20Prema%2C%0D%0A%0D%0AI%20would%20like%20to%20purchase%20an%20astrology%20consultation%20gift%20voucher.%0D%0A%0D%0AMy%20full%20name%3A%0D%0ARecipient%E2%80%99s%20full%20name%3A%0D%0A%0D%0AThank%20you%21" target="_blank" rel="noopener noreferrer" data-i18n="gift.emailButton">Email to Purchase</a>
-                <p class="gift-email-help"><span data-i18n="gift.gmail">Opens Gmail in your browser.</span> <a href="mailto:premamokshaastrology@gmail.com?subject=Gift%20Voucher%20Purchase&amp;body=Hello%20Prema%2C%0D%0A%0D%0AI%20would%20like%20to%20purchase%20an%20astrology%20consultation%20gift%20voucher.%0D%0A%0D%0AMy%20full%20name%3A%0D%0ARecipient%E2%80%99s%20full%20name%3A%0D%0A%0D%0AThank%20you%21" data-i18n="gift.emailApp">Use another email app</a></p>
+                <p class="gift-email-help"><span data-i18n="gift.gmail">Opens Gmail in your browser.</span> <a href="#contact" data-gift-contact data-i18n="gift.contactLink">Send a message here</a></p>
                 <div class="payment-options" aria-labelledby="gift-payment-title">
                     <h3 id="gift-payment-title" data-i18n="gift.pay">Payment options</h3>
                     <div class="payment-links">
@@ -310,7 +310,7 @@
         <div class="contact-content">
             <h2 class="fade-in" data-i18n="contact.title">Let's Connect</h2>
             <p class="fade-in" data-i18n="contact.desc">Have a question about a reading or report, or ready to book? Send a message below — I'd love to hear from you.</p>
-            <form id="contactForm" class="contact-form fade-in">
+            <form id="contactForm" class="contact-form fade-in" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="6427e70c-64ef-4969-9b47-23923d4c5afd">
                 <input type="hidden" name="subject" value="Website inquiry — Prema Moksha Astrology">
                 <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">

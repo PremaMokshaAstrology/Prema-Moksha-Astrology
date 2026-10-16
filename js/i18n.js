@@ -287,7 +287,7 @@ Object.assign(PT, {
     "pay.instructions": "Após combinarmos o serviço e o valor, você pode pagar usando um dos links abaixo.",
     "gift.sessionLink": "Vai comprar uma consulta para outra pessoa? Escolha um vale-presente.",
     "gift.gmail": "Abre o Gmail no navegador.",
-    "gift.emailApp": "Usar outro aplicativo de e-mail"
+    "gift.contactLink": "Enviar uma mensagem aqui"
 });
 Object.assign(ES, {
     "nav.gifts": "Vales regalo",
@@ -303,7 +303,7 @@ Object.assign(ES, {
     "pay.instructions": "Una vez acordados el servicio y el importe, puedes pagar con uno de los enlaces de abajo.",
     "gift.sessionLink": "¿Compras una consulta para otra persona? Elige un vale regalo.",
     "gift.gmail": "Abre Gmail en tu navegador.",
-    "gift.emailApp": "Usar otra aplicación de correo"
+    "gift.contactLink": "Enviar un mensaje aquí"
 });
 
 const DICTS = { pt: PT, es: ES };
