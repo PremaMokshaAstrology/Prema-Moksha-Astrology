@@ -1,7 +1,14 @@
 {
   "name": "premmokastr",
   "compatibility_date": "2026-08-19",
+  "main": "worker.mjs",
+  "build": {
+    "command": "node scripts/build-blog.mjs",
+    "watch_dir": ["posts", "blog.html", "scripts", "vendor"]
+  },
   "assets": {
-    "directory": "./"
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": ["/blog", "/blog/", "/blog.html"]
   }
 }

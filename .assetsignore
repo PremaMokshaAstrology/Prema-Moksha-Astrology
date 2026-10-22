@@ -1,0 +1,11 @@
+worker.mjs
+scripts/**
+tests/**
+vendor/**
+generated/**
+node_modules/**
+.git/**
+.wrangler/**
+.gitignore
+wrangler.jsonc
+SETUP.md

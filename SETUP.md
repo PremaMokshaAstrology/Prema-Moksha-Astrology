@@ -75,7 +75,11 @@ Cloudflare has merged Pages into the Workers flow on most dashboards — the sit
 4. Project name: anything short (it becomes your `.workers.dev` URL) · **Build command: leave blank** · Deploy command: keep `npx wrangler deploy`
 5. Click **Deploy** → wait ~1–2 minutes → you get a URL like `https://<project-name>.workers.dev`
 
-The `wrangler.jsonc` in the repo root tells Wrangler to serve the whole repo folder as static assets — no build step needed. Every push to `main` auto-redeploys the site.
+The `wrangler.jsonc` in the repo root serves the site's assets and builds the blog automatically with `node scripts/build-blog.mjs`. Leave the dashboard Build command blank; Wrangler runs this step itself. Every push to `main` auto-redeploys the site.
+
+Blog article addresses retain `/blog?post=...`. The Worker returns complete HTML, article titles, descriptions, canonical tags and article structured data at these addresses. It also renders all article links on the blog index before JavaScript runs. Article text, the local post index and the sitemap regenerate from `posts/*.md` at each deployment, including posts saved through the CMS. There is no live GitHub API dependency for reading articles or loading the latest-post cards.
+
+To check a blog change locally, run `node scripts/build-blog.mjs` and `node --test tests/blog.test.mjs`. The Markdown renderer is vendored in `vendor/` with its MIT license, so the build needs no package installation. Generated response modules stay out of Git and the public asset directory.
 
 **Step 4: Point the domain to Cloudflare**
 1. In Cloudflare → your Worker project → **Settings** → **Domains & Routes** (or **Custom Domains**)
