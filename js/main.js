@@ -219,34 +219,37 @@ async function loadLatestPosts() {
 
     try {
         const response = await fetch(
-            `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/posts?ref=${GITHUB_BRANCH}`
+            '/posts/index.json'
         );
         
         if (!response.ok) throw new Error('Failed to load posts');
         
-        const files = await response.json();
-        const mdFiles = files.filter(f => f.name.endsWith('.md')).sort((a, b) => b.name.localeCompare(a.name));
-        const latestFiles = mdFiles.slice(0, 3);
+        const posts = await response.json();
+        const latestPosts = posts.slice(0, 3);
 
         container.innerHTML = '';
 
-        for (const file of latestFiles) {
-            const postResponse = await fetch(file.download_url);
-            const markdown = await postResponse.text();
-            const { frontmatter, body } = parseFrontmatter(markdown);
-            const excerpt = body.replace(/[#*`]/g, '').substring(0, 150) + '...';
-            const postSlug = file.name.replace('.md', '');
-
+        for (const post of latestPosts) {
             const card = document.createElement('article');
             card.className = 'blog-card';
-            card.innerHTML = `
-                <div class="blog-text">
-                    <p class="date">${frontmatter.date || ''}</p>
-                    <h3><a href="blog.html?post=${postSlug}">${frontmatter.title || STR.untitled}</a></h3>
-                    <p>${excerpt}</p>
-                    <a href="blog.html?post=${postSlug}" class="read-more">${STR.readMore}</a>
-                </div>
-            `;
+            const text = document.createElement('div');
+            text.className = 'blog-text';
+            const date = document.createElement('p');
+            date.className = 'date';
+            date.textContent = post.date;
+            const heading = document.createElement('h3');
+            const titleLink = document.createElement('a');
+            titleLink.href = post.url;
+            titleLink.textContent = post.title;
+            heading.appendChild(titleLink);
+            const excerpt = document.createElement('p');
+            excerpt.textContent = post.description;
+            const readMore = document.createElement('a');
+            readMore.className = 'read-more';
+            readMore.href = post.url;
+            readMore.textContent = STR.readMore;
+            text.append(date, heading, excerpt, readMore);
+            card.appendChild(text);
             container.appendChild(card);
         }
     } catch (err) {
@@ -263,6 +266,8 @@ async function loadLatestPosts() {
 async function loadBlogPosts() {
     const container = document.getElementById('blog-posts');
     if (!container) return;
+    // Server-rendered text must stay visible without another GitHub request.
+    if (container.dataset.rendered === 'true') return;
 
     const urlParams = new URLSearchParams(window.location.search);
     const postSlug = urlParams.get('post');
@@ -312,9 +317,9 @@ async function loadPostList(container) {
             card.innerHTML = `
                 <div class="blog-text">
                     <p class="date">${frontmatter.date || ''}</p>
-                    <h3><a href="blog.html?post=${postSlug}">${frontmatter.title || STR.untitled}</a></h3>
+                    <h3><a href="/blog?post=${postSlug}">${frontmatter.title || STR.untitled}</a></h3>
                     <p>${excerpt}</p>
-                    <a href="blog.html?post=${postSlug}" class="read-more">${STR.readMore}</a>
+                    <a href="/blog?post=${postSlug}" class="read-more">${STR.readMore}</a>
                 </div>
             `;
             container.appendChild(card);
@@ -360,14 +365,14 @@ async function loadSinglePost(slug, container) {
             <h1>${frontmatter.title || STR.untitled}</h1>
             <div class="post-content">${marked.parse(body)}</div>
             <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(212, 175, 55, 0.2);">
-                <a href="blog.html" class="btn">${STR.backToPosts}</a>
+                <a href="/blog" class="btn">${STR.backToPosts}</a>
             </div>
         `;
     } catch (err) {
         container.innerHTML = `
             <div class="blog-error">
                 <p>${STR.postError}</p>
-                <a href="blog.html" class="btn" style="margin-top: 1rem;">${STR.backToPosts}</a>
+                <a href="/blog" class="btn" style="margin-top: 1rem;">${STR.backToPosts}</a>
             </div>
         `;
         console.error('Post load error:', err);
