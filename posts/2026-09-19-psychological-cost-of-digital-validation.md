@@ -49,3 +49,5 @@ It can break you to live too far away from it.
 It does not matter how much you regulate.
 
 *Yesteryear* is a great book. You should read it.
+
+<div class="post-signature" style="text-align:center; margin:42px auto 0;"><img src="/images/prema-moksha-signature.png" width="360" height="124" alt="Prema Moksha Astrologer" loading="lazy" style="display:inline-block; width:min(360px,85vw); max-width:100%; height:auto;"></div>
