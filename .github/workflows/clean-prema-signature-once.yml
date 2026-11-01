@@ -1,0 +1,54 @@
+name: Remove baked checkerboard from Prema Moksha signature (one time)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/clean-prema-signature-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair-signature:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image processing packages
+        run: python -m pip install Pillow numpy
+      - name: Convert existing signature to real transparent PNG
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import numpy as np
+
+          path = Path('images/prema-moksha-signature.png')
+          img = np.asarray(Image.open(path).convert('RGB'), dtype=np.float32)
+          chroma = img.max(axis=2) - img.min(axis=2)
+
+          # Grid is nearly grayscale; retain only colored signature ink.
+          alpha = np.clip((chroma - 1.5) / 10.0, 0, 1)
+          safe_alpha = np.maximum(alpha[..., None], 0.001)
+          restored = np.clip((img - (1 - alpha[..., None]) * 247) / safe_alpha, 0, 255)
+          colors = np.where((alpha < 0.999)[..., None], restored, img)
+          rgba = np.concatenate((colors, np.rint(alpha[..., None] * 255)), axis=2)
+          rgba = rgba.clip(0, 255).astype('uint8')
+          rgba[rgba[:, :, 3] == 0, :3] = 0
+
+          assert rgba[:, :, 3].min() == 0 and rgba[:, :, 3].max() == 255
+          Image.fromarray(rgba, 'RGBA').save(path, optimize=True)
+          print(f'Converted {path} into a genuinely transparent signature.')
+          PY
+      - name: Commit cleaned signature and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -- .github/workflows/clean-prema-signature-once.yml
+          git add -- images/prema-moksha-signature.png
+          git commit -m "Replace checkerboard signature with genuine transparency"
+          git push origin HEAD:main
