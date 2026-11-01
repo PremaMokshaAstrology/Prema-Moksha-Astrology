@@ -541,3 +541,10 @@ footer p { font-size: 0.9rem; color: var(--gold-dim); }
     .nav-links.active { display: flex; }
     .mobile-menu-btn { display: block; }
 }
+
+/* Clear paths from the homepage to horoscopes and services. */
+.hero-service-links { display:flex; flex-wrap:wrap; justify-content:center; gap:0.85rem; margin:2rem auto 0; }
+.hero-service-links .btn { opacity:1; animation:none; font-size:0.78rem; white-space:normal; text-align:center; }
+.shop-service-link { text-align:center; margin:2.3rem auto 0; }
+.shop-service-link .btn { opacity:1; animation:none; font-size:0.8rem; white-space:normal; }
+@media (max-width:640px) { .hero-service-links { flex-direction:column; align-items:center; } .hero-service-links .btn { width:100%; max-width:330px; } }
