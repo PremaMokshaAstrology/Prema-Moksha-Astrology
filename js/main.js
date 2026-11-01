@@ -215,7 +215,9 @@ async function loadLatestPosts() {
         return;
     }
 
-    container.innerHTML = `<div class="blog-loading">${STR.loadingLatest}</div>`;
+    // Keep the server-rendered latest article links visible to visitors and crawlers.
+    const hasStaticPosts = !!container.querySelector('article.blog-card');
+    if (!hasStaticPosts) container.innerHTML = `<div class="blog-loading">${STR.loadingLatest}</div>`;
 
     try {
         const response = await fetch(
@@ -253,11 +255,13 @@ async function loadLatestPosts() {
             container.appendChild(card);
         }
     } catch (err) {
-        container.innerHTML = `
-            <div class="blog-error">
-                <p>${STR.loadError}</p>
-            </div>
-        `;
+        if (!hasStaticPosts) {
+            container.innerHTML = `
+                <div class="blog-error">
+                    <p>${STR.loadError}</p>
+                </div>
+            `;
+        }
         console.error('Blog load error:', err);
     }
 }
