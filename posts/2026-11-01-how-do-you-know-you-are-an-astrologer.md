@@ -22,3 +22,5 @@ We are made of Universal matter, subject to its physical laws, and our very exis
 Perhaps because my mind operates in a systemic way that sees patterns and cycles, is the reason that I am an Astrologer. Because Astrology has always been for me, a language through which I can make sense of the Web of Life, and, more than anything else, what my part is within this organized chaos.
 
 Do you want to know if you are an Astrology-inclined person? You got to the end of this text. Only a star lover would get here.
+
+<div class="post-signature" style="text-align:center; margin:42px auto 0;"><img src="/images/prema-moksha-signature.png" width="360" height="124" alt="Prema Moksha Astrologer" loading="lazy" style="display:inline-block; width:min(360px,85vw); max-width:100%; height:auto;"></div>
