@@ -14,3 +14,11 @@
     .session-h2 { font-size: 1.5rem; }
     .session-pricing .tier h3 { min-height: 0; }
 }
+
+/* Clear page heading and in-page navigation for choosing a reading. */
+.section-header .session-page-title {font-family:'Cinzel',serif;color:var(--gold);font-size:clamp(1.65rem,3.3vw,2.35rem);line-height:1.35;margin:0 0 0.7rem;}
+.section-header .session-page-title + h2 {font-family:'Cormorant Garamond',serif;font-size:1.45rem;line-height:1.5;letter-spacing:normal;font-weight:400;margin:0 0 1.15rem;color:var(--cream);}
+.session-quicklinks {display:flex;flex-wrap:wrap;justify-content:center;gap:0.7rem;margin:0 0 2.8rem;}
+.session-quicklinks a {font-family:'Lato',sans-serif;font-size:0.83rem;color:var(--link-strong);border:1px solid var(--gold);border-radius:999px;padding:0.65rem 0.9rem;line-height:1.4;}
+.session-quicklinks a:hover,.session-quicklinks a:focus-visible {background:rgba(212,175,55,.13);}
+.session-content h3[id],.session-content h2[id] {scroll-margin-top:110px;}
