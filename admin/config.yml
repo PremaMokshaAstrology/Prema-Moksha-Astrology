@@ -15,6 +15,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Category", name: "category", widget: "select", options: ["Forecast", "Guide", "Transit", "Beginner", "Retrograde", "Lifestyle"] }
+      - { label: "Category", name: "category", widget: "select", options: ["Forecast", "Guide", "Transit", "Beginner", "Retrograde", "Lifestyle", "Astrology & Self-Awareness"] }
       - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
