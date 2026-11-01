@@ -25,3 +25,5 @@ For me, safety has come to mean consistency I can trust. Words that match action
 I am opening bookings for Astrology Self-Awareness sessions for personal development during the first week of November. My workshops are also available for healing events and transformational festivals. If you would like to explore working together or bringing astrology to your community, send me a message.
 
 Much love to the universe, and gratitude for the support I have found. I can honor what hurt, recognize what it cost me, and still feel thankful for the life taking shape now. Today, I am choosing to give my energy to the places where I can grow.
+
+<div class="post-signature" style="text-align:center; margin:42px auto 0;"><img src="/images/prema-moksha-signature.png" width="360" height="124" alt="Prema Moksha Astrologer" loading="lazy" style="display:inline-block; width:min(360px,85vw); max-width:100%; height:auto;"></div>
